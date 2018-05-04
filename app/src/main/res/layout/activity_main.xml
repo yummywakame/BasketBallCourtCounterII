@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:contentDescription="@string/bg_image_description"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg_crop" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/titleHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/digital7_regular7"
+        android:text="@string/title_2"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="@+id/team_b_score_bg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleGuest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/digital7_regular7"
+        android:text="@string/title_1"
+        android:textAlignment="viewEnd"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="@+id/team_a_score"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/team_b_score_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:alpha="0.13"
+        android:fontFamily="@font/digital7_mono"
+        android:text="@string/score_team_bg"
+        android:textAlignment="textEnd"
+        android:textColor="@android:color/white"
+        android:textSize="90sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/titleHome"
+        tools:text="888" />
+
+    <TextView
+        android:id="@+id/team_b_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/digital7_mono"
+        android:text="@string/score_team_A"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorRed"
+        android:textSize="90sp"
+        app:layout_constraintBottom_toBottomOf="@+id/team_b_score_bg"
+        app:layout_constraintEnd_toEndOf="@+id/team_b_score_bg"
+        tools:text="0" />
+
+    <TextView
+        android:id="@+id/team_a_score_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:alpha="0.13"
+        android:fontFamily="@font/digital7_mono"
+        android:text="@string/score_team_bg"
+        android:textAlignment="textEnd"
+        android:textColor="@android:color/white"
+        android:textSize="90sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleGuest"
+        tools:text="888" />
+
+    <TextView
+        android:id="@+id/team_a_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/digital7_mono"
+        android:text="@string/score_team_A"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorRed"
+        android:textSize="90sp"
+        app:layout_constraintBottom_toBottomOf="@+id/team_a_score_bg"
+        app:layout_constraintEnd_toEndOf="@+id/team_a_score_bg"
+        tools:text="0" />
+
+    <Button
+        android:id="@+id/button1A"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_1"
+        android:contentDescription="@string/button_1"
+        android:onClick="add1PointForTeamA"
+        android:padding="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2A"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintStart_toStartOf="@+id/team_a_score_bg" />
+
+    <Button
+        android:id="@+id/button2A"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_2"
+        android:contentDescription="@string/button_2"
+        android:onClick="add2PointsForTeamA"
+        android:padding="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/button3A"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintStart_toStartOf="@+id/button1A" />
+
+    <Button
+        android:id="@+id/button3A"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_3"
+        android:contentDescription="@string/button_3"
+        android:onClick="add3PointsForTeamA"
+        android:padding="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFoulA"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintStart_toStartOf="@+id/button2A" />
+
+    <Button
+        android:id="@+id/button3B"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_3"
+        android:contentDescription="@string/button_3"
+        android:onClick="add3PointsForTeamB"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFoulB"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="@+id/button2B" />
+
+    <Button
+        android:id="@+id/button2B"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_2"
+        android:contentDescription="@string/button_2"
+        android:onClick="add2PointsForTeamB"
+        app:layout_constraintBottom_toTopOf="@+id/button3B"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="@+id/button1B" />
+
+    <Button
+        android:id="@+id/button1B"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_1"
+        android:contentDescription="@string/button_1"
+        android:onClick="add1PointForTeamB"
+        app:layout_constraintBottom_toTopOf="@+id/button2B"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="@+id/team_b_score" />
+
+    <Button
+        android:id="@+id/buttonFoulA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_foul"
+        android:contentDescription="@string/button_foul"
+        android:onClick="add1FoulForTeamA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintStart_toStartOf="@+id/button3A" />
+
+    <TextView
+        android:id="@+id/team_a_foul_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:alpha="0.13"
+        android:fontFamily="@font/digital7_mono"
+        android:text="@string/fouls_team_A_bg"
+        android:textColor="@android:color/white"
+        android:textSize="60sp"
+        app:layout_constraintStart_toStartOf="@+id/team_a_score_bg"
+        app:layout_constraintTop_toBottomOf="@+id/team_a_score_bg"
+        tools:text="88" />
+
+    <TextView
+        android:id="@+id/team_a_foul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/digital7_mono"
+        android:text="@string/fouls_team_A"
+        android:textColor="@color/colorYellow"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="@+id/team_a_foul_bg"
+        app:layout_constraintEnd_toEndOf="@+id/team_a_foul_bg"
+        tools:text="0" />
+
+    <Button
+        android:id="@+id/buttonFoulB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_foul"
+        android:contentDescription="@string/button_foul"
+        android:onClick="add1FoulForTeamB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="@+id/button3B" />
+
+    <TextView
+        android:id="@+id/team_b_foul_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.13"
+        android:fontFamily="@font/digital7_mono"
+        android:text="@string/fouls_team_B_bg"
+        android:textColor="@android:color/white"
+        android:textSize="60dp"
+        app:layout_constraintEnd_toEndOf="@+id/team_b_score"
+        app:layout_constraintTop_toBottomOf="@+id/team_b_score"
+        tools:text="88" />
+
+    <TextView
+        android:id="@+id/team_b_foul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/digital7_mono"
+        android:text="@string/fouls_team_B"
+        android:textColor="@color/colorYellow"
+        android:textSize="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/team_b_foul_bg"
+        app:layout_constraintEnd_toEndOf="@+id/team_b_foul_bg"
+        tools:text="0" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_refresh"
+        android:contentDescription="@string/button_reset"
+        android:onClick="resetBothScores"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundImage"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

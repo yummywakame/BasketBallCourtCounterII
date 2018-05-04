@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Court Counter</string>
+    <string name="bg_image_description">Background of basketball player jumping</string>
+    <string name="title_1">Guest</string>
+    <string name="title_2">Home</string>
+    <string name="button_1">+1</string>
+    <string name="button_2">+2</string>
+    <string name="button_3">+3</string>
+    <string name="button_foul">Foul</string>
+    <string name="button_reset">Reset</string>
+    <string name="score_team_A">0</string>
+    <string name="score_team_B">0</string>
+    <string name="fouls_team_A">0</string>
+    <string name="fouls_team_B">0</string>
+    <string name="score_team_bg">888</string>
+    <string name="score_team_B_bg">888</string>
+    <string name="fouls_team_A_bg">88</string>
+    <string name="fouls_team_B_bg">88</string>
+</resources>
