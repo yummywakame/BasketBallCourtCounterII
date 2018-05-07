@@ -1,4 +1,4 @@
-## Score Keeper App for Grow With Google Udacity Nanodegree - Android Basics
+## Grow With Google Android Basics Nanodegree: PROJECT 2
 # Basket Ball Court Counter II
 
 _**API 23: Android 6.0 (Marshmallow)**_
